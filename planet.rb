@@ -10,6 +10,8 @@ class Planet
     @fun_fact = fun_fact
   end
 
-  # def summary
+  def summary
+    return "For the #{@color} planet #{@name}, it has a mass of #{@mass_kg} kgs."
+  end
 
 end
