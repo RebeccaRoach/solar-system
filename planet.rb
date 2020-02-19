@@ -11,7 +11,7 @@ class Planet
   end
 
   def summary
-    return "For the #{@color} planet #{@name}, it has a mass of #{@mass_kg} kgs."
+    return "The #{@color} planet #{@name} has a mass of #{@mass_kg} kgs and is #{distance_from_sun_km} km from the sun."
   end
 
 end
