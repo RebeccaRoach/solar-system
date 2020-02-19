@@ -41,6 +41,8 @@ def main
   puts found_planet
   puts found_planet.summary
 
+  puts solar_system.distance_between("Mercury", "Venus")
+
 end
 
 main
