@@ -21,7 +21,7 @@ class SolarSystem
 
   def find_planet_by_name(named_planet)
     named_planet = named_planet.capitalize
-    @planets.filter do |planet|
+    @planets.each do |planet|
       if planet.name == named_planet
         return planet
       end
@@ -29,7 +29,11 @@ class SolarSystem
     return false
   end
 
-  def distance_between(planet_1, planet_2)
+  def distance_between
+    puts "What is the first planet?"
+    planet_1 = gets.chomp
+    puts "What is the second planet?"
+    planet_2 = gets.chomp
     planet_1_distance = find_planet_by_name(planet_1).distance_from_sun_km 
     planet_2_distance = find_planet_by_name(planet_2).distance_from_sun_km 
     difference = planet_1_distance - planet_2_distance
